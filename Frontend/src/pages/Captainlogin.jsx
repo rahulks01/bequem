@@ -36,15 +36,14 @@ const Captainlogin = () => {
   };
   return (
     <div className="p-7 h-screen flex flex-col justify-between">
-      <div>
-        {/* <img className='w-20 mb-3' src="https://www.svgrepo.com/show/505031/uber-driver.svg" alt="" /> */}
-
+      <div className="w-16 mb-10 text-black text-3xl font-semibold">βequem</div>
+      <div className="flex flex-col items-center justify-center h-full w-full">
         <form
           onSubmit={(e) => {
             submitHandler(e);
           }}
         >
-          <h3 className="text-lg font-medium mb-2">What's your email</h3>
+          <h3 className="text-lg font-medium mb-2">What's your email?</h3>
           <input
             required
             value={email}
@@ -66,7 +65,7 @@ const Captainlogin = () => {
             }}
             required
             type="password"
-            placeholder="password"
+            placeholder="Password"
           />
 
           <button className="bg-[#111] text-white font-semibold mb-3 rounded-lg px-4 py-2 w-full text-lg placeholder:text-base">
@@ -74,7 +73,7 @@ const Captainlogin = () => {
           </button>
         </form>
         <p className="text-center">
-          Join a fleet?{" "}
+          Want to join the fleet?{" "}
           <Link to="/captain-signup" className="text-blue-600">
             Register as a Captain
           </Link>

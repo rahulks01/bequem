@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -46,7 +45,7 @@ const ConfirmRidePopUp = (props) => {
         <div className="flex items-center gap-3 ">
           <img
             className="h-12 rounded-full object-cover w-12"
-            src="https://i.pinimg.com/236x/af/26/28/af26280b0ca305be47df0b799ed1b12b.jpg"
+            src="/user.jpg"
             alt=""
           />
           <h2 className="text-lg font-medium capitalize">
@@ -60,7 +59,7 @@ const ConfirmRidePopUp = (props) => {
           <div className="flex items-center gap-5 p-3 border-b-2">
             <i className="ri-map-pin-user-fill"></i>
             <div>
-              <h3 className="text-lg font-medium">562/11-A</h3>
+              <h3 className="text-lg font-medium">Pickup</h3>
               <p className="text-sm -mt-1 text-gray-600">
                 {props.ride?.pickup}
               </p>
@@ -69,7 +68,7 @@ const ConfirmRidePopUp = (props) => {
           <div className="flex items-center gap-5 p-3 border-b-2">
             <i className="text-lg ri-map-pin-2-fill"></i>
             <div>
-              <h3 className="text-lg font-medium">562/11-A</h3>
+              <h3 className="text-lg font-medium">Drop</h3>
               <p className="text-sm -mt-1 text-gray-600">
                 {props.ride?.destination}
               </p>
@@ -79,12 +78,12 @@ const ConfirmRidePopUp = (props) => {
             <i className="ri-currency-line"></i>
             <div>
               <h3 className="text-lg font-medium">₹{props.ride?.fare} </h3>
-              <p className="text-sm -mt-1 text-gray-600">Cash Cash</p>
+              <p className="text-sm -mt-1 text-gray-600">Cash</p>
             </div>
           </div>
         </div>
 
-        <div className="mt-6 w-full">
+        <div className="w-full">
           <form onSubmit={submitHander}>
             <input
               value={otp}
@@ -94,7 +93,7 @@ const ConfirmRidePopUp = (props) => {
               placeholder="Enter OTP"
             />
 
-            <button className="w-full mt-5 text-lg flex justify-center bg-green-600 text-white font-semibold p-3 rounded-lg">
+            <button className="w-full mt-2 text-lg flex justify-center bg-green-600 text-white font-semibold p-3 rounded-lg">
               Confirm
             </button>
             <button

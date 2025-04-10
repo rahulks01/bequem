@@ -7,7 +7,6 @@ import axios from "axios";
 const UserLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [userData, setUserData] = useState({});
 
   const { user, setUser } = useContext(UserDataContext);
   const navigate = useNavigate();
@@ -37,16 +36,15 @@ const UserLogin = () => {
   };
 
   return (
-    <div className="p-7 h-screen flex flex-col justify-between">
-      <div>
-        {/* <img className='w-16 mb-10' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYQy-OIkA6In0fTvVwZADPmFFibjmszu2A0g&s" alt="" /> */}
-
+    <div className="p-5 h-screen flex flex-col justify-between">
+      <div className="w-16 mb-10 text-black text-3xl font-semibold">βequem</div>
+      <div className="flex flex-col items-center justify-center h-full w-full">
         <form
           onSubmit={(e) => {
             submitHandler(e);
           }}
         >
-          <h3 className="text-lg font-medium mb-2">What's your email</h3>
+          <h3 className="text-lg font-medium mb-2">What's your email?</h3>
           <input
             required
             value={email}
@@ -68,7 +66,7 @@ const UserLogin = () => {
             }}
             required
             type="password"
-            placeholder="password"
+            placeholder="Password"
           />
 
           <button className="bg-[#111] text-white font-semibold mb-3 rounded-lg px-4 py-2 w-full text-lg placeholder:text-base">

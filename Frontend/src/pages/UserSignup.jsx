@@ -8,7 +8,6 @@ const UserSignup = () => {
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [userData, setUserData] = useState({});
 
   const navigate = useNavigate();
 
@@ -45,20 +44,17 @@ const UserSignup = () => {
   return (
     <div>
       <div className="p-7 h-screen flex flex-col justify-between">
-        <div>
-          {/* <img
-            className="w-16 mb-10"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYQy-OIkA6In0fTvVwZADPmFFibjmszu2A0g&s"
-            alt=""
-          /> */}
-
+        <div className="w-16 mb-10 text-black text-3xl font-semibold">
+          βequem
+        </div>
+        <div className="flex flex-col items-center justify-center h-full w-full">
           <form
             onSubmit={(e) => {
               submitHandler(e);
             }}
           >
             <h3 className="text-lg w-1/2  font-medium mb-2">
-              What's your name
+              What's your name?
             </h3>
             <div className="flex gap-4 mb-7">
               <input
@@ -83,7 +79,7 @@ const UserSignup = () => {
               />
             </div>
 
-            <h3 className="text-lg font-medium mb-2">What's your email</h3>
+            <h3 className="text-lg font-medium mb-2">What's your email?</h3>
             <input
               required
               value={email}
@@ -105,7 +101,7 @@ const UserSignup = () => {
               }}
               required
               type="password"
-              placeholder="password"
+              placeholder="Password"
             />
 
             <button className="bg-[#111] text-white font-semibold mb-3 rounded-lg px-4 py-2 w-full text-lg placeholder:text-base">
