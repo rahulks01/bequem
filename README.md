@@ -1,6 +1,6 @@
 # βequem
 
-A basic cab booking service application built with **React**, **Node.js**, **MongoDB**, **Socket.IO**, and the **Google Maps API** for real-time location tracking and ride management.<br> <i>(Bequem translates to 'comfortable' in German)</i>
+A basic cab booking service application built with **React**, **Node.js**, **MongoDB**, **Socket.IO**, and the **Google Maps API** for real-time location tracking and ride management.<br> <i>(Bequem translates to 'comfortable' in German).</i>
 
 ---
 
